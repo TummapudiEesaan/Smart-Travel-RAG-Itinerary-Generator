@@ -1,0 +1,162 @@
+SYSTEM ARCHITECTURE EXPLANATION
+Smart-Travel RAG Itinerary Generator
+
+INTRODUCTION
+
+The system architecture for the Smart-Travel RAG Itinerary Generator is designed to combine information retrieval with generative AI to produce accurate travel recommendations.
+
+The system follows a Retrieval-Augmented Generation architecture.
+
+MAIN COMPONENTS
+
+1. User Interface
+2. Query Processing Module
+3. Knowledge Retrieval Module
+4. Knowledge Base
+5. Prompt Construction Module
+6. LLM API
+7. Response Display Module
+
+------------------------------------------------
+
+1. USER INTERFACE
+
+The user interface is the interaction layer where users input travel-related questions.
+
+Examples:
+
+• "Plan a 3-day trip in Kashmir"
+• "Suggest hidden places in Jammu & Kashmir"
+
+The interface collects the query and sends it to the query processing module.
+
+------------------------------------------------
+
+2. QUERY PROCESSING MODULE
+
+This module prepares the user query for retrieval.
+
+Tasks performed:
+
+• Convert query to lowercase
+• Remove unnecessary characters
+• Extract important keywords
+
+------------------------------------------------
+
+3. KNOWLEDGE BASE
+
+The knowledge base stores curated travel information.
+
+File:
+travel_data.txt
+
+Contents include:
+
+• Travel destinations
+• Local attractions
+• Travel tips
+• Hidden places
+• Cultural experiences
+
+------------------------------------------------
+
+4. KNOWLEDGE RETRIEVAL MODULE
+
+This module searches the knowledge base for relevant information.
+
+Process:
+
+1. Split knowledge base into sentences
+2. Match keywords with user query
+3. Rank sentences by similarity
+4. Select most relevant information
+
+The selected sentences form the context for the AI model.
+
+------------------------------------------------
+
+5. PROMPT CONSTRUCTION MODULE
+
+The prompt module combines:
+
+• Retrieved knowledge
+• User query
+
+Example prompt structure:
+
+"You are a travel expert. Using the context below, generate a personalized itinerary."
+
+Context:
+(retrieved travel information)
+
+User Query:
+(user question)
+
+------------------------------------------------
+
+6. LLM API
+
+The prompt is sent to the Large Language Model through an API.
+
+Examples:
+
+• OpenAI GPT
+• Google Gemini
+
+The LLM generates a travel itinerary using the provided context.
+
+------------------------------------------------
+
+7. RESPONSE DISPLAY MODULE
+
+The generated itinerary is displayed to the user in readable format.
+
+Example output:
+
+Day 1:
+Visit Yusmarg meadow.
+
+Day 2:
+Explore Doodhpathri valley.
+
+------------------------------------------------
+
+DATA FLOW
+
+User Query
+      ↓
+Query Processing
+      ↓
+Knowledge Retrieval
+      ↓
+Relevant Context
+      ↓
+Prompt Construction
+      ↓
+LLM API
+      ↓
+Generated Itinerary
+      ↓
+User Output
+
+------------------------------------------------
+
+SYSTEM REQUIREMENTS
+
+Hardware Requirements
+
+• Standard computer
+• Internet connection
+
+Software Requirements
+
+• Python 3.8+
+• LLM API access
+• Text-based knowledge base
+
+------------------------------------------------
+
+CONCLUSION
+
+The Smart-Travel RAG Itinerary Generator architecture ensures that the AI responses remain grounded in verified travel information. By combining knowledge retrieval with generative AI, the system produces accurate, personalized travel recommendations while minimizing hallucinations.

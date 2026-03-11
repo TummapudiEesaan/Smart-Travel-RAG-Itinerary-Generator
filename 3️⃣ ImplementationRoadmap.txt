@@ -1,0 +1,111 @@
+IMPLEMENTATION ROADMAP
+Smart-Travel RAG Itinerary Generator
+
+Phase 1: Environment Setup
+
+Step 1: Install Python
+        Install Python version 3.8 or higher.
+
+Step 2: Install required packages
+
+        pip install openai
+        or
+        pip install google-generativeai
+
+Step 3: Create project directory
+
+SmartTravelRAG/
+│
+├── main.py
+├── travel_data.txt
+├── AlgorithmExplanation.txt
+├── ProjectDescription.txt
+├── ImplementationRoadmap.txt
+└── SystemArchitectureExplanation.txt
+
+------------------------------------------------
+
+Phase 2: Create Knowledge Base
+
+Step 1: Create travel_data.txt
+
+Step 2: Add curated travel information
+
+Example entries:
+
+"Yusmarg is a peaceful meadow located 47 km from Srinagar known for scenic views."
+
+"Doodhpathri is an offbeat valley famous for its lush green pastures and milk-like flowing streams."
+
+"Gurez Valley is a remote Himalayan destination perfect for adventure lovers."
+
+Step 3: Save the file.
+
+------------------------------------------------
+
+Phase 3: Implement Retrieval Logic
+
+Step 1: Load the travel_data.txt file.
+
+Step 2: Split the text into sentences.
+
+Step 3: Implement keyword matching.
+
+Step 4: Compare user query with sentences.
+
+Step 5: Rank sentences by relevance.
+
+Step 6: Select top relevant results.
+
+------------------------------------------------
+
+Phase 4: Integrate LLM API
+
+Step 1: Obtain API key.
+
+Step 2: Store API key in environment variables.
+
+Step 3: Create prompt template.
+
+Example prompt:
+
+"You are a local travel expert. Using the following context, generate a travel itinerary."
+
+Step 4: Insert retrieved knowledge into prompt.
+
+Step 5: Send prompt to LLM API.
+
+Step 6: Receive generated response.
+
+------------------------------------------------
+
+Phase 5: Display Results
+
+Step 1: Print itinerary to terminal.
+
+Step 2: Format output for readability.
+
+------------------------------------------------
+
+Phase 6: Testing
+
+Step 1: Test queries like:
+
+"Plan a 2 day trip in Kashmir."
+
+"Suggest hidden places in Kashmir."
+
+Step 2: Verify retrieval accuracy.
+
+Step 3: Confirm LLM generates context-based answers.
+
+------------------------------------------------
+
+Phase 7: Final Documentation
+
+Prepare documentation files including:
+
+• Algorithm explanation
+• System architecture
+• Project description
+• Implementation roadmap

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Smart-Travel RAG Itinerary Generator - AI-powered travel assistant for Jammu & Kashmir">
+    <title>Smart-Travel RAG | AI Travel Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <!-- Background Animated Gradient -->
+    <div class="bg-gradient"></div>
+
+    <!-- Main Application Container -->
+    <div class="app-container">
+
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <div class="logo-group">
+                    <div class="logo-icon">🌍</div>
+                    <div class="logo-text">
+                        <h1>Smart-Travel RAG</h1>
+                        <p class="tagline">AI Travel Guide for Jammu & Kashmir</p>
+                    </div>
+                </div>
+                <div class="header-badge" id="statusBadge">
+                    <span class="badge-dot"></span>
+                    <span class="badge-text">Connecting...</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Chat Container -->
+        <main class="chat-container" id="chatContainer">
+
+            <!-- Welcome Message -->
+            <div class="message bot-message welcome-message" id="welcomeMessage">
+                <div class="message-avatar">🏔️</div>
+                <div class="message-content">
+                    <div class="message-bubble">
+                        <h2>Welcome to Smart-Travel RAG! ✨</h2>
+                        <p>I'm your AI travel guide for <strong>Jammu & Kashmir</strong>. I use Retrieval-Augmented Generation to provide accurate, personalized travel recommendations.</p>
+                        <div class="suggestion-chips">
+                            <button class="chip" onclick="sendSuggestion(this)">Plan a 3-day trip in Kashmir</button>
+                            <button class="chip" onclick="sendSuggestion(this)">Suggest hidden places in Kashmir</button>
+                            <button class="chip" onclick="sendSuggestion(this)">Best time to visit Gulmarg</button>
+                            <button class="chip" onclick="sendSuggestion(this)">Tell me about Kashmiri cuisine</button>
+                            <button class="chip" onclick="sendSuggestion(this)">5-day honeymoon itinerary</button>
+                            <button class="chip" onclick="sendSuggestion(this)">Adventure activities in Kashmir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Input Area -->
+        <footer class="input-area">
+            <div class="input-wrapper">
+                <div class="input-container">
+                    <input
+                        type="text"
+                        id="queryInput"
+                        placeholder="Ask about Kashmir travel, itineraries, food, hidden gems..."
+                        autocomplete="off"
+                        maxlength="500"
+                    >
+                    <button class="send-btn" id="sendBtn" onclick="sendQuery()">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </div>
+                <p class="input-hint">Powered by RAG + Google Gemini AI</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

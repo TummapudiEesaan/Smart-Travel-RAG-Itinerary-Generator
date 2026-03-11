@@ -1,0 +1,63 @@
+PROJECT TITLE:
+Smart-Travel RAG Itinerary Generator
+
+TECHNOLOGY STACK:
+Python, LLM API (OpenAI / Gemini), Retrieval-Augmented Generation (RAG)
+
+ALGORITHM EXPLANATION
+
+Step 1: Start the program.
+
+Step 2: Load required Python libraries.
+        - os (environment variables)
+        - openai or google generative AI SDK
+        - string processing utilities
+        - file handling utilities
+
+Step 3: Load the travel knowledge base.
+        - Open the file "travel_data.txt".
+        - Read all travel information stored in the file.
+        - Store the contents in memory.
+
+Step 4: Preprocess the knowledge base.
+        - Split the text into smaller sentences or paragraphs.
+        - Remove unnecessary whitespace.
+        - Convert text to lowercase for easier matching.
+
+Step 5: Accept user query.
+        - Prompt the user to enter a travel question.
+        - Example:
+          "Plan a 2-day itinerary in Jammu & Kashmir"
+          or
+          "Suggest hidden places in Kashmir"
+
+Step 6: Preprocess user query.
+        - Convert query to lowercase.
+        - Remove punctuation if necessary.
+
+Step 7: Perform knowledge retrieval.
+        - Compare user query keywords with sentences from the knowledge base.
+        - Identify sentences containing matching keywords.
+        - Rank the sentences based on keyword similarity.
+
+Step 8: Select relevant context.
+        - Choose the top matching sentences.
+        - Combine them into a context block.
+
+Step 9: Construct the prompt for the LLM.
+        - Combine:
+            a) User query
+            b) Retrieved context from travel_data.txt
+        - Create a structured prompt.
+
+Step 10: Send the prompt to the LLM API.
+         - The prompt instructs the LLM to generate a travel itinerary using the provided context.
+
+Step 11: Receive the generated response.
+         - The LLM processes the context and generates a travel plan.
+
+Step 12: Display the itinerary to the user.
+
+Step 13: Allow the user to ask another query or exit.
+
+Step 14: End the program.

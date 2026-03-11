@@ -1,0 +1,69 @@
+PROJECT TITLE:
+Smart-Travel RAG Itinerary Generator
+
+PROJECT DOMAIN:
+Artificial Intelligence / Generative AI / Travel Technology
+
+PROJECT DESCRIPTION
+
+The Smart-Travel RAG Itinerary Generator is an AI-powered travel assistant that generates personalized travel itineraries using Retrieval-Augmented Generation (RAG).
+
+Traditional chatbots rely entirely on the knowledge already present in the language model. This often leads to hallucinations or outdated information. The RAG architecture solves this problem by combining external knowledge retrieval with generative AI.
+
+In this project, a curated knowledge base containing travel information about a specific region (for example Jammu & Kashmir) is stored in a text file called "travel_data.txt". This file includes details about hidden destinations, local experiences, travel tips, and unique attractions.
+
+When a user asks a travel-related question, the system first searches the knowledge base for relevant information using keyword matching or simple vector search techniques. The retrieved information is then supplied as context to a Large Language Model (LLM) through an API.
+
+The LLM uses the retrieved knowledge to generate a structured travel itinerary or recommendation tailored to the user's request.
+
+This system ensures that the generated response is both creative and factually grounded in the provided knowledge base.
+
+KEY FEATURES
+
+• AI-generated travel itineraries
+• Retrieval-Augmented Generation (RAG)
+• Knowledge base integration
+• Personalized recommendations
+• Accurate and contextual travel responses
+
+TECHNOLOGIES USED
+
+Programming Language:
+Python
+
+AI Model:
+LLM API (OpenAI / Gemini)
+
+Data Storage:
+Text-based knowledge base
+
+Core Concepts:
+• Retrieval-Augmented Generation
+• Prompt Engineering
+• Context Injection
+• Information Retrieval
+
+APPLICATIONS
+
+• AI travel assistants
+• Smart tourism platforms
+• Personalized itinerary generators
+• Local travel recommendation systems
+
+LIMITATIONS
+
+• Limited to the knowledge stored in travel_data.txt
+• Keyword search may not capture semantic similarity
+• Requires internet access for LLM API
+
+FUTURE IMPROVEMENTS
+
+• Implement vector database search (FAISS / ChromaDB)
+• Add multiple destinations
+• Add web interface
+• Integrate maps and weather APIs
+• Add multi-day itinerary planning
+
+CONCLUSION
+
+The Smart-Travel RAG Itinerary Generator demonstrates how Retrieval-Augmented Generation can improve the accuracy of AI responses by combining knowledge retrieval with generative models. This approach reduces hallucinations and creates reliable, domain-specific AI assistants.
